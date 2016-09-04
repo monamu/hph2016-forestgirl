@@ -56,8 +56,7 @@ section {
 	margin: 5% auto;
 }
 
-
-main section:first-of-type {
+main >  section:first-of-type {
 	height: auto;
 	width: 100%;
 }
@@ -66,9 +65,9 @@ section h2 {
 	font-size: 5vw;
 }
 
-main section:nth-of-type(2) {
+.flex-box section {
 	height: auto;
-	width: 60%;
+	width: 40%;
 }
 
 section h3 {
@@ -78,11 +77,16 @@ section h3 {
 	width: 100%;	
 }
 
-section ul {
+main ul {
 	display: flex;
 	flex-direction: column;
 	-webkit-align-content: stretch; /* Safari */
   align-content: stretch;
+}
+
+main {
+	list-style: none;
+	width: 100%;
 }
 
 main li {
@@ -90,13 +94,17 @@ main li {
 	width: 100%;
 }
 
+main li a {
+	float: left;
+	padding: 3%;
+	width: 100%;
+}
+
 section li a {
 	background: url(../image/018.jpg) no-repeat 0 0;
 	-webkit-background-size: contain;
 	background-size: contain;
-	float: left;
 	list-style: none;
-	padding: 3%;
 	text-indent: 3em;
 	width: 100%;
 }
@@ -108,19 +116,16 @@ aside {
 	width: 30%;
 }
 
-div > .box li {
-	float: left;
+aside ul {
+	margin: 10% 0;
 }
 
-div > .box a {
-	float: left;
-	width: 30%;
+footer {
+	background: #d11d16;
+	color: #fff;
+	text-align: center;
 }
 
-div > .box a img {
-	width: 100%;
-}
-
-div > .box p {
-	width: 60%;
+.copyright {
+	padding: 10%　;
 }

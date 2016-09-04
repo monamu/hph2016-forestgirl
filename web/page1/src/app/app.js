@@ -3,7 +3,6 @@ import ol from 'openlayers';
 import FeatureWrapper from './FeatureWrapper';
 require('es6-promise').polyfill();
 
-const aws = AWS;
 const _$ = $;
 
 let currentData = {};
@@ -124,18 +123,23 @@ const getData = (id) =>
 
 const listPage = () => {
   const tableEle = _$('#items');
-
+console.log(tableEle);
   getData()
     .then((items) => {
       items.map((item) => {
+        // const el = _$(
+        //   '<tr>' +
+        //     `<td><a href="detail.html?itemid=${item.itemid}">${item.itemid}</a></td>` +
+        //     `<td>${item.title}</td>` +
+        //     `<td>${item.description}</td>` +
+        //     `<td style="text-align:right">${item.price}</td>` +
+        //     `<td>${item.thetaUrl}</td>` +
+        //   '</tr>');
         const el = _$(
-          '<tr>' +
-            `<td><a href="detail.html?itemid=${item.itemid}">${item.itemid}</a></td>` +
-            `<td>${item.thetaUrl}</td>` +
-            `<td>${item.title}</td>` +
-            `<td>${item.description}</td>` +
-            `<td>${item.price}</td>` +
-          '</tr>');
+          `<li><a href="detail.html?itemid=${item.itemid}">` +
+          `<img src="image/leaf.jpg" alt="" style="margin-right:10px;"></a>` +
+          `<p style="padding:10px"><div style="font-size:150%">${item.title}</div><div>${item.description}</div><div style="text-align:right;font-size:160%">${item.price}円</div></p></li>`
+        );
         el.appendTo(tableEle);
         return item;
       });
@@ -166,7 +170,7 @@ const detailPage = (id) => {
     });
 };
 
-
+console.log(_$('#listPage').length );
 if (_$('#listPage').length > 0) {
   listPage();
 } else if (_$('#detailPage').length > 0) {
