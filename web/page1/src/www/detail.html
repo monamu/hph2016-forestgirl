@@ -1,44 +1,38 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>HPH2016 forestgirl</title>
-
-  <!-- Use minimum-scale=1 to enable GPU rasterization -->
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, user-scalable=0, maximum-scale=1, minimum-scale=1"
-  >
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script>
-  </script>
+	<meta charset="UTF-8">
+	<title>白樺</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="Forefit,ハンドクラフト,森,林">
+	<meta name="twitter:description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet" type="text/css">
 </head>
-
 <body id="detailPage">
-  <div style="width:100%;height:150px;border:solid 1px black;">
-    商品詳細
-  </div>
-<table>
-  <tr>
-    <th>タイトル</th><td id="title"></td>
-  </tr>
-  <tr>
-    <th>説明</th><td id="description"></td>
-  </tr>
-  <tr>
-    <th>価格</th><td id="price"></td>
-  </tr>
-</table>
-<div id="thetaImage"></div>
-
-<div id="ol3Map" style="width:500px;height:500px"></div>
-
+	<div class="wrapper">
+		<header>
+			<div class="head-wrap">
+				<h1>Forefit</h1>
+			</div>
+		</header>
+		<main>
+			<div class="items">
+				<h3 id="title">texttextttext</h3>
+				<p class="text" id="description"></p>
+				<p class="text" id="price"></p>
+				<div id="thetaImage"></div>
+			</div>
+			<div class="map-wrap">
+				<div><div id="ol3Map" style="width:500px;height:500px"></div></div>
+				<button>カートへ入れる</button>
+			</div>
+		</main>
+	</div><!-- /.wrapper -->
   <script src="lib/aws-sdk.min.js"></script>
   <script src="lib/jquery/jquery-2.1.4.min.js"></script>
   <script src="lib/jquery.querystring/jquery.querystring.min.js"></script>
   <script src="app.js"></script>
 </body>
-
 </html>

@@ -42,6 +42,7 @@ h1 {
 }
 
 main {
+	height: inherit;
 	margin: 0 auto;
 	width: 80%;
 }
@@ -75,7 +76,7 @@ section h3 {
 	color: #d11d16;
 	font-size: 2vw;
 	text-align: center;
-	width: 100%;	
+	width: 100%;
 }
 
 section ul {
@@ -123,4 +124,31 @@ div > .box a img {
 
 div > .box p {
 	width: 60%;
+}
+
+.items {
+	height: 300px;
+	width: 100%;
+}
+
+.items h3 {
+	color: #d11d16;
+	font-size: 2vw;
+}
+
+.items h3,
+.text {
+	float: left;
+	width: 60%;
+}
+
+.items div {
+	float: left;
+	width: 30%;
+}
+
+.map-wrap {
+	float: left;
+	height: 500px;
+	width: 80%;
 }
