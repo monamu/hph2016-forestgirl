@@ -24,7 +24,7 @@ let deviceLayer;
 
 // Mapの初期化
 const prepareMap = () => {
-  const positionData = (currentData)?currentData:env.defaultLocation;
+  const positionData = (currentData) ? currentData : env.defaultLocation;
   return new Promise((resolve) => {
     ol3Map = new ol.Map({
       target: 'ol3Map',
@@ -80,31 +80,8 @@ const putFeatures = (params) => {
   return Promise.resolve(params);
 };
 
-const getData = (id) => {
-  let items = [
-    {
-      "lon": 142.3605716228485,
-      "price": 123,
-      "thetaUrl": "https://theta360.com/s/gbMh905mo8JV3PwgmnRFKPT1w",
-      "lat": 43.765143524274045,
-      "category": "1",
-      "itemid": "1",
-      "title": "○○近辺の白樺樹皮",
-      "description": "説明文です"
-    },
-    {
-      "lon": 143.55148315429688,
-      "price": 6000,
-      "thetaUrl": "https://theta360.com/s/iDhZBavRajKGpoY2Ov7rD19fA",
-      "lat": 44.05798552253712,
-      "category": "1",
-      "itemid": "2",
-      "title": "えんがる近辺の白樺樹皮",
-      "description": "伐倒までサポートします！"
-    }
-  ];
-
-  return new Promise((resolve, reject) => {
+const getData = (id) =>
+  new Promise((resolve, reject) => {
     if (id) {
       axios.get(
           `https://ify9s1x325.execute-api.ap-northeast-1.amazonaws.com/prod/items/${id}`,
@@ -143,7 +120,6 @@ const getData = (id) => {
         });
     }
   });
-};
 
 
 const listPage = () => {
@@ -152,15 +128,16 @@ const listPage = () => {
   getData()
     .then((items) => {
       items.map((item) => {
-        const el = $(
-          `<tr>` +
+        const el = _$(
+          '<tr>' +
             `<td><a href="detail.html?itemid=${item.itemid}">${item.itemid}</a></td>` +
             `<td>${item.thetaUrl}</td>` +
             `<td>${item.title}</td>` +
             `<td>${item.description}</td>` +
             `<td>${item.price}</td>` +
-          `</tr>`);
+          '</tr>');
         el.appendTo(tableEle);
+        return item;
       });
     });
 };
