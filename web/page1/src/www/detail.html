@@ -16,33 +16,26 @@
   </script>
 </head>
 
-<body id="listPage">
+<body id="detailPage">
   <div style="width:100%;height:150px;border:solid 1px black;">
-    商品一覧
+    商品詳細
   </div>
-  <table>
-    <thead>
-      <tr>
-        <th>
-          id
-        </th>
-        <th>
-          画像URL
-        </th>
-        <th>
-          タイトル
-        </th>
-        <th>
-          説明
-        </th>
-        <th>
-          価格
-        </th>
-      </tr>
-    </thead>
-    <tbody id="items">
-    </tbody>
-  </table>
+<table>
+  <tr>
+    <th>タイトル</th><td id="title"></td>
+  </tr>
+  <tr>
+    <th>説明</th><td id="description"></td>
+  </tr>
+  <tr>
+    <th>価格</th><td id="price"></td>
+  </tr>
+</table>
+<blockquote id="thetaImage" data-width="500" data-height="375" class="ricoh-theta-spherical-image" >
+</blockquote>
+<script async src="https://theta360.com/widgets.js" charset="utf-8"></script>
+
+<div id="ol3Map" style="width:500px;height:500px"></div>
 
   <script src="lib/aws-sdk.min.js"></script>
   <script src="lib/jquery/jquery-2.1.4.min.js"></script>
