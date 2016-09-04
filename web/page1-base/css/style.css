@@ -1,0 +1,109 @@
+body,
+html {
+	height: 100%;
+	width: 100%;
+}
+
+img {
+	vertical-align: baseline;
+}
+
+a {
+	text-decoration: none;
+}
+
+.wrapper {
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	background: url(../image/leaf_heart.jpg) no-repeat 0 50%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: auto;
+	width: 100%;
+}
+
+.head-wrap {
+	margin: 0 auto;
+	height: auto;
+	width: 80%;
+}
+
+h1 {
+  color: #d11d16;
+  font-family: 'Homemade Apple', cursive;
+  font-size: 10vw;
+  margin: 5% auto;
+  padding-bottom: 3%;
+  text-align: center;
+  width: 100%;
+}
+
+main {
+	margin: 0 auto;
+	width: 80%;
+}
+
+section {
+	word-wrap: break-word;
+}
+
+.flex-box {
+	display: flex;
+	justify-content: space-between;
+	margin: 5% auto;
+}
+
+
+main section:first-of-type {
+	height: auto;
+	width: 100%;
+}
+
+section h2 {
+	font-size: 5vw;
+}
+
+main section:nth-of-type(2) {
+	height: auto;
+	width: 60%;
+}
+
+section h3 {
+	color: #d11d16;
+	font-size: 2vw;
+	text-align: center;
+	width: 100%;	
+}
+
+section ul {
+	display: flex;
+	flex-direction: column;
+	-webkit-align-content: stretch; /* Safari */
+  align-content: stretch;
+}
+
+main li {
+	list-style: none;
+	width: 100%;
+}
+
+section li a {
+	background: url(../image/018.jpg) no-repeat 0 0;
+	-webkit-background-size: contain;
+	background-size: contain;
+	float: left;
+	list-style: none;
+	padding: 3%;
+	text-indent: 3em;
+	width: 100%;
+}
+
+aside {
+	background: url(../image/25329004812.jpg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	width: 30%;
+}
